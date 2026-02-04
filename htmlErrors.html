@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab-01 Practice</title>
+    <style>
+      .anchor,
+      .headingLevel,
+      .labels,
+      .tablecaption,
+      .linktext {
+        background-color: #f5eeda;
+      }
+      .heading1,
+      .imgAlt,
+      .tables,
+      .missingScope,
+      .multiplearia {
+        background-color: #dedcd7;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Lab Practice</h1>
+      <p>Lab Exam Practice – Semantic HTML & Accessibility Foundations</p>
+    </header>
+
+    <!-- Primary navigation landmark for keyboard and screen reader users -->
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="analysis.html">Interaction Analysis</a></li>
+        <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+        <li><a href="htmlErrors.html" aria-current="page">Lab Practice</a></li>
+        <li><a href="assignment01.html">Lab 01 Rules</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="html-errors">
+        <h2>HTML Error Identification & Correction</h2>
+        <p>
+          This page demonstrates common HTML structure and accessibility
+          mistakes, along with their corrected versions, within the scope of Lab
+          01.
+        </p>
+
+        <table>
+          <caption>
+            Common HTML errors with corrected solutions
+          </caption>
+
+          <thead>
+            <tr style="background-color: #a19a85">
+              <th scope="col">UI Element / Issue</th>
+              <th scope="col">Wrong HTML (with mistake)</th>
+              <th scope="col">Correct UI Element</th>
+              <th scope="col">Correct HTML</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- Error 1 -->
+            <tr class="anchor">
+              <th scope="row">Anchor directly inside ul (missing li)</th>
+              <td>
+                <pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;a href="index.html"&gt;Home&lt;/a&gt;
+    &lt;li&gt;&lt;a href="cv.html"&gt;CV&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+              </td>
+              <td>Navigation list where each link is inside a list item</td>
+              <td>
+                <pre><code>&lt;nav aria-label="Primary navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="cv.html"&gt;CV&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+              </td>
+            </tr>
+
+            <!-- Error 2 -->
+            <tr class="heading1">
+              <th scope="row">Multiple h1 elements</th>
+              <td>
+                <pre><code>&lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;h1&gt;Section Title&lt;/h1&gt;</code></pre>
+              </td>
+              <td>Single main heading</td>
+              <td>
+                <pre><code>&lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;h2&gt;Section Title&lt;/h2&gt;</code></pre>
+              </td>
+            </tr>
+
+            <!-- Error 3 -->
+            <tr class="headingLevel">
+              <th scope="row">Heading hierarchy is incorrect</th>
+              <td>
+                <pre><code>&lt;h1&gt;Analysis&lt;/h1&gt;
+&lt;h3&gt;Norman Model&lt;/h3&gt;</code></pre>
+              </td>
+              <td>Correct heading hierarchy</td>
+              <td>
+                <pre><code>&lt;h1&gt;Analysis&lt;/h1&gt;
+&lt;h2&gt;Norman Model&lt;/h2&gt;</code></pre>
+              </td>
+            </tr>
+
+            <!-- Error 4 -->
+            <tr class="imgAlt">
+              <th scope="row">Image missing alt attribute</th>
+              <td>
+                <pre><code>&lt;img src="norman.png"&gt;</code></pre>
+              </td>
+              <td>Image with alt text</td>
+              <td>
+                <pre><code>&lt;img src="norman.png" alt="Norman action cycle diagram"&gt;</code></pre>
+              </td>
+            </tr>
+
+            <!-- Error 5 -->
+            <tr class="labels">
+              <th scope="row">
+                Form label not associated with its control (<code>for</code> ≠
+                <code>id</code>)
+              </th>
+              <td>
+                <pre><code>&lt;label for="msg"&gt;Message&lt;/label&gt;
+&lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;</code></pre>
+              </td>
+              <td>Label correctly connected to form control</td>
+              <td>
+                <pre><code>&lt;label for="message"&gt;Message&lt;/label&gt;
+&lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;</code></pre>
+              </td>
+            </tr>
+
+            <!-- Error 6 -->
+            <tr class="tables">
+              <th scope="row">Table missing caption</th>
+              <td>
+                <pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;Model&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+              </td>
+              <td>Accessible table with caption</td>
+              <td>
+                <pre><code>&lt;table&gt;
+  &lt;caption&gt;Interaction Models&lt;/caption&gt;
+  &lt;tr&gt;&lt;td&gt;Model&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+              </td>
+            </tr>
+
+            <!-- Error 7 -->
+            <tr class="tablecaption">
+              <th scope="row">
+                Comparison table missing <code>caption</code> and header cells
+                (<code>th</code>)
+              </th>
+              <td>
+                <pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;Model&lt;/td&gt;&lt;td&gt;Predicts&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;KLM&lt;/td&gt;&lt;td&gt;Time&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+              </td>
+              <td>Accessible table with caption + headers + scope</td>
+              <td>
+                <pre><code>&lt;table&gt;
+  &lt;caption&gt;Models and what they predict&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Model&lt;/th&gt;
+      &lt;th scope="col"&gt;Predicts&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;KLM&lt;/th&gt;
+      &lt;td&gt;Execution time&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+              </td>
+            </tr>
+
+            <!-- Error 8 -->
+            <tr class="missingScope">
+              <th scope="row">Missing scope attribute</th>
+              <td>
+                <pre><code>&lt;th&gt;KLM&lt;/th&gt;</code></pre>
+              </td>
+              <td>Header with scope</td>
+              <td>
+                <pre><code>&lt;th scope="row"&gt;KLM&lt;/th&gt;</code></pre>
+              </td>
+            </tr>
+
+            <!-- Error 9 -->
+            <tr class="linktext">
+              <th scope="row">Vague link text</th>
+              <td>
+                <pre><code>&lt;a href="analysis.html"&gt;Click here&lt;/a&gt;</code></pre>
+              </td>
+              <td>Descriptive link text</td>
+              <td>
+                <pre><code>&lt;a href="analysis.html"&gt;Interaction Analysis&lt;/a&gt;</code></pre>
+              </td>
+            </tr>
+
+            <!-- Error 10 -->
+            <tr class="multiplearia">
+              <th scope="row">Multiple <code>aria-current</code> values</th>
+              <td>
+                <pre><code>&lt;nav aria-label="Primary navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html" aria-current="page"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="cv.html" aria-current="page"&gt;CV&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+              </td>
+              <td>Only one current page</td>
+              <td>
+                <pre><code>&lt;nav aria-label="Primary navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="cv.html" aria-current="page"&gt;CV&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>True / False</h2>
+        <ul>
+          <li>
+            Every link inside <code>&lt;ul&gt;</code> must be placed inside an
+            <code>&lt;li&gt;</code>. <br />
+            <strong>✅ True.</strong>
+          </li>
+          <li>
+            A page may have multiple <code>h1</code> headings to make text
+            larger. <br /><strong>❌ False.</strong>
+          </li>
+          <li>
+            <code>aria-current="page"</code> should be used on the active
+            navigation item. <br /><strong>✅ True.</strong>
+          </li>
+          <li>
+            A form is accessible even if it has no
+            <code>&lt;label&gt;</code> elements. <br /><strong
+              >❌ False.</strong
+            >
+          </li>
+          <li>
+            KLM predicts execution time for expert, error-free performance.
+            <br /><strong>✅ True.</strong>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Short Answers</h2>
+        <ul>
+          <li>
+            <strong>Semantic vs generic elements:</strong>
+            Semantic elements convey meaning and structure (e.g.,
+            <code>nav</code>), while generic elements like <code>div</code> have
+            no inherent meaning.
+          </li>
+          <li>
+            <strong>KLM limitation:</strong>
+            KLM focuses on low-level physical actions (keystrokes, pointing,
+            clicking etc.) and does not model planning, interpretation, or
+            decision-making.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
+</html>

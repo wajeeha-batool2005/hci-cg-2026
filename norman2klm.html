@@ -1,230 +1,492 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Norman vs. GOMS vs. KLM – Cognitive Models</title>
-
-  <style>
-    /* Minimal styling allowed in Lab 01: color only */
-    .row-norman { background-color: #fff3cd; } /* warm amber */
-    .row-goms   { background-color: #e7f3ff; } /* light blue */
-    .row-klm    { background-color: #e9f7ef; } /* light green */
-
-    .key-takeaway {
+  <head>
+    <meta charset="UTF-8" />
+    <title>Norman vs. GOMS vs. KLM – Cognitive Models</title>
+    <style>
+      h2 {
+        font-size: 27px;
+      }
+      .explains , .structure , .stages , .limitations, .stage2, .stage4, .stage6, .KLMtiming {
+        background-color: #f5eeda;
+      }
+      .category , .predicts , .phases , .process, .steps, .stage1, .stage3, .stage5, .stage7{
+        background-color: #dedcd7;
+      }
+      .key-takeaway {
       background-color: #fff3cd;
-      padding: 0.5em;
+      /* padding: 0.5em; */
     }
-  </style>
-</head>
-<body>
+    </style>
+  </head>
+  <body>
+    <!-- Page header -->
+    <header>
+      <h1>Norman vs. GOMS vs. KLM</h1>
+      <p>
+        Model-based evaluation and cognitive models (Dix et al., Chapter 3, 12)
+      </p>
+    </header>
 
-  <!-- Page header -->
-  <header>
-    <h1>Norman vs. GOMS vs. KLM</h1>
-    <p>Model-based evaluation and cognitive models (Dix et al., Chapter 12)</p>
-  </header>
+    <!-- Primary navigation -->
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="analysis.html">Interaction Analysis</a></li>
+        <li>
+          <a href="norman2klm.html" aria-current="page">Norman–GOMS–KLM</a>
+        </li>
+        <li><a href="htmlErrors.html" >Lab Practice</a></li>
+        <li><a href="assignment01.html">Lab 01 Rules</a></li>
+      </ul>
+    </nav>
 
-  <!-- Primary navigation -->
-  <nav aria-label="Primary navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="analysis.html">Interaction Analysis</a></li>
-      <li><a href="norman2klm.html" aria-current="page">Norman–GOMS–KLM</a></li>
-      <li><a href="assignment01.html">Lab 01 Rules</a></li>
+    <!-- Main content -->
+    <main>
+      <!-- Comparison section -->
+      <section>
+        <h2>Comparison Between Models</h2>
 
-    </ul>
-  </nav>
+        <table>
+          <caption>
+            Norman vs. GOMS vs. KLM: Key Differences
+          </caption>
 
-  <!-- Main content -->
-  <main>
+          <thead>
+            <tr style="background-color: #a19a85">
+              <th scope="col">Aspect</th>
+              <th scope="col">Norman</th>
+              <th scope="col">GOMS</th>
+              <th scope="col">KLM</th>
+            </tr>
+          </thead>
 
-    <!-- Comparison section -->
-    <section>
-      <h2>Clean Comparison (Class &amp; Exam Reference)</h2>
+          <tbody>
+            <tr class="category">
+              <th scope="row">Category</th>
+              <td>Cognitive / descriptive model</td>
+              <td>Predictive / analytic model</td>
+              <td>Predictive / quantitative model</td>
+            </tr>
 
-      <table border="1">
-        <caption>
-          Model-based evaluation: what each model explains vs. predicts
-        </caption>
+            <tr class="explains">
+              <th scope="row">Explains</th>
+              <td>User's interaction with system, errors, feedback, gulfs</td>
+              <td>Task structure for expert users</td>
+              <td>Low-level physical and motor actions</td>
+            </tr>
 
+            <tr class="predicts">
+              <th scope="row">Predicts</th>
+              <td>Nothing (no performance prediction)</td>
+              <td>Relative efficiency</td>
+              <td>Execution time</td>
+            </tr>
+
+            <tr class="structure">
+              <th scope="row">Structure of cycle</th>
+              <td>Linear cycle</td>
+              <td>Hierarchical recursion</td>
+              <td>Linear execution</td>
+            </tr>
+
+            <tr class="phases">
+              <th scope="row">Phases</th>
+              <td>
+                2 phases:
+                <ul>
+                  <li>Execution</li>
+                  <li>Evaluation</li>
+                </ul>
+              </td>
+              <td>Hierarchical components, no linear phases</td>
+              <td>Execution phase (ignore acquisition phase)</td>
+            </tr>
+
+            <tr class="stages">
+              <th scope="row">Stages</th>
+              <td>
+                7 stages:
+                <ul>
+                  <li>Goal</li>
+                  <li>Plan/ Intention</li>
+                  <li>Specify action</li>
+                  <li>Execute action</li>
+                  <li>Perceive</li>
+                  <li>Interpret</li>
+                  <li>Evaluate</li>
+                </ul>
+              </td>
+              <td>
+                4 hierarchical elements:
+                <ul>
+                  <li>Goal</li>
+                  <li>Methods</li>
+                  <li>Selection rules</li>
+                  <li>Operators</li>
+                </ul>
+              </td>
+              <td>
+                7 primitive operators:
+                <ul>
+                  <li>[K] - Keystroke</li>
+                  <li>[B] - Button press</li>
+                  <li>[P] - Pointing</li>
+                  <li>[H] - Homing</li>
+                  <li>[D] - Drawing</li>
+                  <li>[M] - Mental preparation</li>
+                  <li>[R] - System response</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr class="process">
+              <th scope="row">Processes</th>
+              <td>Thinking → Action → Evaluation + Gulfs</td>
+              <td>Planning → Actions</td>
+              <td>Actions + Time</td>
+            </tr>
+
+            <tr class="limitations">
+              <th scope="row">Limitations</th>
+              <td>No time prediction</td>
+              <td>No system response, no error (expert user)</td>
+              <td>No cognition, no error (expert user)</td>
+            </tr>
+
+            <tr class="steps">
+              <th scope="row">Steps of Interaction</th>
+              <td>
+                <ol>
+                  <li>Form goal (what to achieve)</li>
+                  <li>Plan/ intent ways to achieve goal</li>
+                  <li>Specify the sequence of action</li>
+                  <li>Execute action</li>
+                  <li>Perceive system state (feedback by system)</li>
+                  <li>Interpret the response of system</li>
+                  <li>Evaluate outcome with respect to goal defined</li>
+                </ol>
+              </td>
+              <td>
+                <ol>
+                  <li>Define goal</li>
+                  <li>Break/ decompose goal into subgoals/ methods</li>
+                  <li>
+                    Apply selection rules to choose method from alternatives
+                  </li>
+                  <li>Break method into operators and execute</li>
+                  <li>
+                    Return to higher goal or complete task (hierarchical task
+                    analysis)
+                  </li>
+                </ol>
+              </td>
+              <td>
+                <ol>
+                  <li>
+                    List task's physical actions/keystroke-level operators
+                  </li>
+                  <li>Insert mental operators (M) using heuristics/rules</li>
+                  <li>Sum predefined times for each operator</li>
+                  <li>Predict total execution time</li>
+                </ol>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+<!-- table for comparision of stages of 3 models -->
+      <section>
+        <h2>Stages Comparison: Norman vs. GOMS vs. KLM</h2>
+        <table>
+          <caption>Comparison of Stages Between Norman vs GOMS vs KLM</caption>
+          <thead>
+            <tr style="background-color: #a19a85">
+              <th scope="col">Norman's Model</th>
+              <th scope="col">GOMS Mdoel</th>
+              <th scope="col">KLM Model</th>
+              <th scope="col">Alignment Analysis</th>
+              <th scope="col">Conceptual Mapping</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="stage1">
+              <td>Establish Goal</td>
+              <td>Define goal</td>
+              <td><i>Acquisition ignored</i></td>
+              <td>Norman's and GOMS match perfectly</td>
+              <td><p>User intentions.</p><p>GOMS: goals and methods are intensions at different abstraction level.</p><p>Goals are top-level objectives while methods are the ways to accomplish goals/ subgoals.</p> </td>
+            </tr>
+            <tr class="stage2">
+              <td>Plan/ Intent</td>
+              <td>Methods and Selection Rules</td>
+              <td><i>Acquisition ignored</i></td>
+              <td>Norman's and GOMS match conceptually</td>
+              <td><p>Cognitive decision before execution state.</p><p>In Norman, context alignment is implicit while in GOMS, choice can be implicit or explicit.</p> <p>Selection Rules are used to encode choice logic when multiple methods are modeled.</p></td>
+            </tr>
+            <tr class="stage3">
+              <td>Specify action sequence</td>
+              <td><i>Not modeled explicitly</i></td>
+              <td>List operators</td>
+              <td>Norman's and KLM match conceptually</td>
+              <td><p>Action specification</p><p>KLM's [M] and Norman's Specify are not same. Thinking is abstract in GOMS/ KLM.</p></td>
+            </tr>
+            <tr class="stage4">
+              <td>Execute action</td>
+              <td>Break method → execute operators</td>
+              <td>Execute operators</td>
+              <td>All 3 models perfectly match</td>
+              <td>Norman: gulf of execution</td>
+            </tr>
+            <tr class="stage5">
+              <td>Perceive system state</td>
+              <td>Return to higher goal</td>
+              <td><i>No evaluation</i></td>
+              <td>-</td>
+              <td>Norman: gulf of evaluation </td>
+            </tr>
+            <tr class="stage6">
+              <td>Interpret response</td>
+              <td><i>Not modeled</i></td>
+              <td><i>No evaluation</i></td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr class="stage7">
+              <td>Evaluate outcome</td>
+              <td>Complete task</td>
+              <td><i>No evaluation</i></td>
+              <td>-</td>
+              <td><p>GOMS assumes perfect perception, instant interpretation and automatic goal satisfaction.</p></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- table for who paid example map on 3 models -->
+      <section>
+        <h2>Parallel Analysis: "Who Paid? Problem"</h2>
+        <table>
         <thead>
-          <tr>
-            <th scope="col">Model</th>
-            <th scope="col">Category</th>
-            <th scope="col">What it Explains</th>
-            <th scope="col">What it Predicts</th>
+          <tr style="background-color: #a19a85">
+            <th scope="col">Stage</th>
+            <th scope="col">Norman</th>
+            <th scope="col">GOMS</th>
+            <th scope="col">KLM</th>
+            <th scope="col">Key Insight</th>
           </tr>
         </thead>
 
         <tbody>
-          <tr class="row-norman">
-            <th scope="row">Norman</th>
-            <td>Cognitive / descriptive</td>
-            <td>Understanding, errors, feedback, gulfs</td>
-            <td>❌ Nothing (no performance prediction)</td>
+          <tr class="stage1">
+            <th scope="row">1. Goal</th>
+            <td>
+              Record that Maria paid 5000 PKR for group dinner at Kababjees
+              so everyone pays fairly.
+            </td>
+            <td>
+              Record dinner payment so everyone’s share is correct.
+            </td>
+            <td>
+              Not modeled in KLM.
+            </td>
+            <td>
+              Emphasizes user intent and social fairness.
+            </td>
           </tr>
 
-          <tr class="row-goms">
-            <th scope="row">GOMS</th>
-            <td>Predictive / analytic</td>
-            <td>Task structure for expert users</td>
-            <td>✔ Relative efficiency</td>
+          <tr class="stage2">
+            <th scope="row">2. Plan</th>
+            <td>
+              1. Open Splitwise<br>
+              2. Tap "Add Expense"<br>
+              3. Enter description & amount<br>
+              4. Select payer<br>
+              5. Choose participants<br>
+              6. Select split method<br>
+              7. Submit
+            </td>
+            <td>
+              <strong>Methods:</strong><br>
+              1. Open app → Add expense → Enter details → Select payer →
+              Select participants → Choose split → Save<br>
+              2. Alternative: Quick-add using voice input (if app supports) <br><br>
+              <strong>Selection Rules:</strong><br>
+              If payer is Maria then select Maria.<br>
+              If equal split then choose equal split.
+            </td>
+            <td>
+              Not modeled in KLM.
+            </td>
+            <td>
+              Norman focuses on decision-making complexity. <br>
+              GOMS formalizes all possible methods.
+            </td>
           </tr>
 
-          <tr class="row-klm">
-            <th scope="row">KLM</th>
-            <td>Predictive / quantitative</td>
-            <td>Low-level physical and motor actions</td>
-            <td>✔ Execution time</td>
+          <tr class="stage3">
+            <th scope="row">3. Specify</th>
+            <td>
+              Type "Dinner Kababjees", enter "5000", select "Maria" as payer,
+              check "Ali", "Ahmed", "Sara", choose "Equal split".
+            </td>
+            <td>
+              Implicitly method selection.
+            </td>
+            <td>
+              pre-specified.
+            </td>
+            <td>
+              Norman highlights memory burden. <br>
+              GOMS identifies operators. <br>
+              KLM measures physical actions.
+            </td>
+          </tr>
+
+          <tr class="stage4">
+            <th scope="row">4. Execution</th>
+            <td>
+              Physically type , select, check, and confirm.
+            </td>
+            <td>
+              Operators used:<br>
+              Typing <br>
+              Tapping <br>
+              Selecting dropdowns <br>
+              Checking boxes<br><br>
+              Execution of operators in correct sequence.
+            </td>
+            <td>
+              Operators sequence: <br>
+              [P] - tap the app icon <br>
+              [P] - tap "ADD Expense" <br>
+              [K] - keyboard (type "Dinner Kababjees") <br>
+              [K] - keyboard (type "5000") <br>
+              [P]+[M] - tap dropdown and identify payer <br>
+              [P]+[K]+[M] - checkboxes for Ali, Ahmed, Sara <br>
+              [P]+[M] - tap Equal as split method <br>
+              [P] - Tap "Save"
+            </td>
+            <td>
+              Norman considers usability and social interruption. <br>
+              GOMS and KLM focus on motor execution.
+            </td>
+          </tr>
+
+          <tr class="stage5">
+            <th scope="row">5. Perceive</th>
+            <td>
+              Green checkmark animation, <br>
+              confirmation message, <br>
+              updated balances, <br>
+              notifications sent to others.
+            </td>
+            <td>
+              No feedback.
+            </td>
+            <td>
+              Not modeled .
+            </td>
+            <td>
+              Norman emphasizes feedback visibility. <br>
+              GOMS and KLM ignores feedback.
+            </td>
+          </tr>
+
+          <tr class="stage6">
+            <th scope="row">6. Interpret</th>
+            <td>
+              User understands who owes how much and whether notifications
+              were sent.
+            </td>
+            <td>
+              Cognitive understanding that the goal is achieved.
+            </td>
+            <td>
+              Not modeled.
+            </td>
+            <td>
+              Norman captures interpretation and social trust. <br>
+              GOMS checks task completion. <br>
+              KLM does not include interpretation.
+            </td>
+          </tr>
+
+          <tr class="stage7">
+            <th scope="row">7. Evaluate</th>
+            <td>
+              Check expense in group history,
+              confirm participants and split,
+              see if anyone objects.
+            </td>
+            <td>
+              Verify correct method executed;
+              reapply method if incorrect.
+            </td>
+            <td>
+              Mental (M) and pointing (P) to verify screens.
+            </td>
+            <td>
+              Norman: “Social verification and outcome satisfaction” to reflect trust and group consensus. <br>
+
+GOMS: Validate method success; if incorrect, repeat method or adjust plan. <br>
+
+KLM: Mental check (M) and perception (P) to confirm results; no additional motor actions beyond those used to verify.
+            </td>
+          </tr>
+
+          <tr class="KLMtiming">
+            <th scope="row">KLM Timing</th>
+            <td>Not applicable.</td>
+            <td>Not applicable.</td>
+            <td>
+              Open app (P) – 1.2s<br>
+              Tap Add Expense (P) – 0.8s<br>
+              Type description (K) – 2.0s<br>
+              Type amount (K) – 1.0s<br>
+              Select payer (P+M) – 2.0s<br>
+              Select participants (P+K+M) – 3.0s<br>
+              Choose split (P+M) – 1.5s<br>
+              Tap Save (P) – 0.8s<br>
+              <strong>Total ≈ 12.3 seconds</strong>
+            </td>
+            <td>
+              KLM is purely quantitative and time-based.
+            </td>
           </tr>
         </tbody>
       </table>
-    </section>
+      </section>
+      
 
-    <!-- KLM operators -->
-    <section>
-      <h2>KLM Operators (Execution-Level Primitives)</h2>
+      <!-- Key takeaways -->
+      <section>
+        <h2>Key Takeaway</h2>
 
+        <blockquote class="key-takeaway">
+          <p>
+            <strong>
+              Norman’s model focuses on the user’s cognitive cycle of goals and
+              evaluation, GOMS structures user behaviour into goals, methods,
+              and operators, while KLM removes cognition details and quantifies
+              interaction efficiency in time.
+            </strong>
+          </p>
+        </blockquote>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
       <p>
-        The Keystroke-Level Model (KLM) decomposes the <strong>execution phase</strong>
-        of interaction into a small set of primitive operators. KLM assumes the user
-        is expert and that the method has already been chosen.
+        <strong><i>Reference:</i></strong> <br />
+        Differences - Dix et al., Chapter 3, 12 <br>
+        Who paid? problem - from lecture
       </p>
-
-      <table border="1">
-        <caption>
-          KLM operators (Dix et al., Chapter 12 – Cognitive Models / Physical &amp; Device Models)
-        </caption>
-
-        <thead>
-          <tr>
-            <th scope="col">Operator</th>
-            <th scope="col">Name</th>
-            <th scope="col">Meaning</th>
-            <th scope="col">Example</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <th scope="row">K</th>
-            <td>Keystroking</td>
-            <td>Pressing a key (including modifiers)</td>
-            <td>Typing a character or pressing Delete</td>
-          </tr>
-
-          <tr>
-            <th scope="row">B</th>
-            <td>Button press</td>
-            <td>Pressing a mouse button</td>
-            <td>Left-click</td>
-          </tr>
-
-          <tr>
-            <th scope="row">P</th>
-            <td>Pointing</td>
-            <td>Moving pointer to a target</td>
-            <td>Move cursor to an icon</td>
-          </tr>
-
-          <tr>
-            <th scope="row">H</th>
-            <td>Homing</td>
-            <td>Switching hand between devices</td>
-            <td>Keyboard → mouse</td>
-          </tr>
-
-          <tr>
-            <th scope="row">D</th>
-            <td>Drawing</td>
-            <td>Drawing lines using a pointing device</td>
-            <td>Dragging to draw a shape</td>
-          </tr>
-
-          <tr>
-            <th scope="row">M</th>
-            <td>Mental preparation</td>
-            <td>Preparing for a physical action</td>
-            <td>Pause before clicking the correct control</td>
-          </tr>
-
-          <tr>
-            <th scope="row">R</th>
-            <td>System response</td>
-            <td>Waiting for system feedback (if required)</td>
-            <td>Application loading</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Worked example -->
-    <section>
-      <h2>Worked Example: Correcting a Single Character</h2>
-
-      <p>
-        Example task: the user notices a single-character error in a mouse-based
-        editor, deletes it, retypes it, and returns to the insertion point.
-      </p>
-
-      <ol>
-        <li>Move hand to mouse</li>
-        <li>Position mouse after bad character</li>
-        <li>Return to keyboard</li>
-        <li>Delete character</li>
-        <li>Type correction</li>
-        <li>Reposition insertion point</li>
-      </ol>
-
-      <p>One possible KLM operator sequence:</p>
-
-      <pre>
-H[mouse]
-P B[LEFT]
-H[keyboard]
-M K[DELETE]
-K[char]
-H[mouse] M P B[LEFT]
-      </pre>
-
-      <p>
-        This sequence illustrates how KLM models only execution-level actions.
-        High-level planning, learning, and interpretation are not represented.
-      </p>
-    </section>
-
-    <!-- Key takeaways -->
-    <section>
-      <h2>Key Takeaways</h2>
-
-      <blockquote class="key-takeaway">
-        <p>
-          <strong>
-            The Keystroke-Level Model consists of seven primitive operators
-            (K, B, P, H, D, M, R) used to predict execution time for expert,
-            error-free interaction, and is a low-level instance of the GOMS framework.
-          </strong>
-        </p>
-      </blockquote>
-
-      <blockquote class="key-takeaway">
-        <p>
-          <strong>
-            KLM has only seven operators because it models execution,
-            not thinking about what to do.
-          </strong>
-        </p>
-      </blockquote>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p><a href="index.html">Back to Home</a></p>
-  </footer>
-
-</body>
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
 </html>

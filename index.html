@@ -1,64 +1,340 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <!-- Character encoding for proper text rendering -->
-  <meta charset="UTF-8">
+  <head>
+    <!-- Character encoding for proper text rendering -->
+    <meta charset="UTF-8" />
 
-  <!-- Page title shown in browser tab and screen readers -->
-  <title>Don Norman – Home</title>
-</head>
-<body>
+    <!-- Page title shown in browser tab and screen readers -->
+    <title>HCI Models – Home</title>
+    <style>
+      /* img {
+        height: 250px;
+        width: 450px;
+      } */
+      h2 {
+        font-size: 27px;
+      }
+      h3 {
+        font-size: 24px;
+      }
+      h4 {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Page header: identifies the site and its purpose -->
+    <header>
+      <h1>Human Computer Interaction Models</h1>
+      <p>Human–Computer Interaction Models Comparison</p>
+    </header>
 
-  <!-- Page header: identifies the site and its purpose -->
-  <header>
-    <h1>Don Norman</h1>
-    <p>Human–Computer Interaction Philosopher</p>
-  </header>
+    <!-- Primary navigation landmark for keyboard and screen reader users -->
+    <nav aria-label="Primary navigation">
+      <ul>
+        <!-- Current page is indicated using aria-current -->
+        <li>
+          <a href="index.html" aria-current="page">Home</a>
+        </li>
 
-  <!-- Primary navigation landmark for keyboard and screen reader users -->
-  <nav aria-label="Primary navigation">
-    <ul>
-      <!-- Current page is indicated using aria-current -->
-      <li>
-        <a href="index.html" aria-current="page">Home</a>
-      </li>
+        <!-- Navigation links to other site sections -->
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="analysis.html">Interaction Analysis</a></li>
+        <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+        <li><a href="htmlErrors.html">Lab Practice</a></li>
+        <li><a href="assignment01.html">Lab 01 Rules</a></li>
+      </ul>
+    </nav>
 
-      <!-- Navigation links to other site sections -->
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="analysis.html">Interaction Analysis</a></li>
-      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
-      <li><a href="assignment01.html">Lab 01 Rules</a></li>
+    <!-- Main content landmark: unique content of this page -->
+    <main>
+      <section>
+        <!-- Section heading establishes content hierarchy -->
+        <h2>Introduction to HCI Models:</h2>
+        <p>
+          Human–Computer Interaction (HCI) models are theoretical frameworks
+          that explain how users interact with computer systems. These models
+          focus on cognitive processes, task performance, and system feedback to
+          create effective and user-friendly interfaces. HCI models guide
+          interface design, evaluation, and optimization.
+        </p>
+        <!-- Informative image with alternative text for accessibility -->
+        <img src="hcimodel.jpg" alt="Diagram showing HCI model interaction" />
+      </section>
 
-    </ul>
-  </nav>
+      <section>
+        <h2>Key HCI Models:</h2>
+        <!-- Subsections for each model - self contained content -->
+        <article>
+          <h3>Norman’s Model</h3>
+          <p>
+            Norman's model of interaction describes the process of interaction
+            between a human user and a computer system. The model highlights the
+            cognitive steps involved in interacting with a computer and helps
+            identify usability issues.
+          </p>
+          <h4>Execution-Evaluation Cycle:</h4>
+          <p>
+            The Norman's interaction cycle can be divided into two major phases:
+          </p>
+          <ul>
+            <li>
+              <strong>Execution phase -</strong> user plans in this phase and
+              perform actions on the system to achieve the goal.
+            </li>
+            <li>
+              <strong>Evaluation phase -</strong> in this phase user observe and
+              evaluate the system's response with respect to the desired goal.
+            </li>
+          </ul>
 
-  <!-- Main content landmark: unique content of this page -->
-  <main>
-    <section>
-      <!-- Section heading establishes content hierarchy -->
-      <h2>Biography</h2>
+          <h4>Gulfs:</h4>
+          <p>
+            Gulfs refers to the gaps between the user's mental model and the
+            system's actual capabilities or feedback. Norman's model highlights
+            two gulfs:
+          </p>
+          <ul>
+            <li>
+              <strong>Gulf of execution -</strong> it represents the effort
+              needed by users to convert their objectives into actions that the
+              system permits.
+            </li>
+            <li>
+              <strong>Gulf of evaluation -</strong> it represents the gap
+              between system's response and the user's expectation.
+            </li>
+          </ul>
 
-      <!-- Informative image with alternative text for accessibility -->
-      <img src="norman.jpg" alt="Portrait of Don Norman">
+          <h4>7 Stages of Interaction Cycle:</h4>
 
+          <!-- table of stages of norman model -->
+          <table>
+            <caption>
+              7 Stages of Norman's Execution-Evaluation Model (Dix et al.,
+              Chapter 3 pg#126)
+            </caption>
+            <thead>
+              <tr style="background-color: #a19a85">
+                <th scope="col">Phase</th>
+                <th scope="col">Stage</th>
+                <th scope="col">Example</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <!-- Execution Phase -->
+              <tr class="st1" style="background-color: #dedcd7">
+                <th scope="row" rowspan="4">Execution</th>
+                <td>Establishing the goal</td>
+                <td>It's getting dark, need more light in room</td>
+              </tr>
+
+              <tr class="st2" style="background-color: #dedcd7">
+                <td>Forming the intention</td>
+                <td>Turn on the desk lamp to increase the light</td>
+              </tr>
+
+              <tr class="st3" style="background-color: #dedcd7">
+                <td>Specifying the action</td>
+                <td>The user decides to reach out and press the lamp switch</td>
+              </tr>
+
+              <tr class="st4" style="background-color: #dedcd7">
+                <td>Executing the action</td>
+                <td>The user physically presses the switch on the desk lamp</td>
+              </tr>
+
+              <!-- Evaluation Phase -->
+              <tr class="st5" style="background-color: #f5eeda">
+                <th scope="row" rowspan="3">Evaluation</th>
+                <td>Perceiving the system state</td>
+                <td>
+                  The user observes whether the light turns on or remains off
+                </td>
+              </tr>
+
+              <tr class="st6" style="background-color: #f5eeda">
+                <td>Interpreting the system state</td>
+                <td>
+                  If the light does not turn on, the user interprets this as a
+                  possible fault, such as a blown bulb or unplugged lamp
+                </td>
+              </tr>
+
+              <tr class="st7" style="background-color: #f5eeda">
+                <td>Evaluating the system state</td>
+                <td>
+                  The user evaluates whether the new lighting condition
+                  satisfies the original goal of having enough light
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+
+        <article>
+          <h3>GOMS Model</h3>
+          <p>
+            GOMS of Card, Moran, and Newell breaks down skilled user tasks into
+            four key elements—Goals, Operators, Methods, and Selection rules—to
+            predict performance in human-computer interaction. It focuses on
+            planning and action stages while excluding system evaluation, as it
+            assumes expert users with no need for feedback interpretation.
+          </p>
+          <h4>Goals</h4>
+          <p>
+            Goals represent what users aim to accomplish. They are structured
+            hierarchically as "memory points" for decision-making and error
+            recovery.
+          </p>
+          <h4>Operators</h4>
+          <p>
+            These are the basic, atomic actions at the lowest analysis level,
+            including physical moves (e.g., press 'X' key, move mouse) or mental
+            ones (e.g., read dialog). GOMS model consist of 7 operators, used to
+            define the actions performed by user.
+          </p>
+          <ul>
+            <li>K - keystroke/ keypress</li>
+            <li>B - button press</li>
+            <li>P - pointing</li>
+            <li>H - homing</li>
+            <li>D - drawing</li>
+            <li>M - mental preparation</li>
+            <li>R - system response</li>
+          </ul>
+          <h4>Methods</h4>
+          <p>
+            Methods are alternative sequences of subgoals and operators to
+            fulfill a goal. They are organized in a hierarchical structure,
+            where a high-level goal is decomposed into lower-level actions.
+          </p>
+          <h4>Selection Rules</h4>
+          <p>
+            Selection rules in the GOMS model serve as decision-making
+            mechanisms that systematically determine which method to apply when
+            multiple methods exist for achieving a single goal.
+          </p>
+        </article>
+
+        <article>
+          <h3>KLM (Keystroke-Level Model)</h3>
+          <p>
+            The Keystroke-Level Model (KLM) predicts user performance time for
+            simple, routine unit tasks (under 20 seconds) by decomposing the
+            execution phase of interaction into a small set of primitive motor
+            operators. It assumes the user is an expert and the method has
+            already been chosen. KLM is a low-level instance of the GOMS
+            framework with only seven operators because it models execution, not
+            thinking about what to do.
+          </p>
+          <h4>Two-Phase Task Structure</h4>
+          <ul>
+            <li>
+              <strong>Acquisition Phase -</strong> user constructs mental
+              representation of the task and plans method using system
+              primitives. KLM ignores this completely - assumes expert user with
+              method pre-decided.
+            </li>
+            <li>
+              <strong>Execution Phase -</strong> pure motor actions performed
+              automatically by expert users, with no high-level cognition. KLM
+              made predictions only on this stage.
+            </li>
+          </ul>
+
+          <h4>7 Primitive Operators</h4>
+          <table>
+            <caption>
+              KLM Operators and Their Predicted Execution Time
+            </caption>
+            <thead>
+              <tr style="background-color: #a19a85">
+                <th scope="col">Operator</th>
+                <th scope="col">Name</th>
+                <th scope="col">Time(s)</th>
+                <th scope="col">Meaning</th>
+                <th scope="col">Example</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="K" style="background-color: #f5eeda">
+                <th scope="row">K</th>
+                <td>Keystroking</td>
+                <td>0.28</td>
+                <td>Pressing a key (including modifiers)</td>
+                <td>Typing a character or pressing Delete</td>
+              </tr>
+
+              <tr class="B" style="background-color: #dedcd7">
+                <th scope="row">B</th>
+                <td>Button press</td>
+                <td>0.10</td>
+                <td>Pressing a mouse button</td>
+                <td>Left-click</td>
+              </tr>
+
+              <tr class="P" style="background-color: #f5eeda">
+                <th scope="row">P</th>
+                <td>Pointing</td>
+                <td>1.10</td>
+                <td>Moving pointer to a target</td>
+                <td>Move cursor to an icon</td>
+              </tr>
+
+              <tr class="H" style="background-color: #dedcd7">
+                <th scope="row">H</th>
+                <td>Homing</td>
+                <td>0.40</td>
+                <td>Switching hand between devices</td>
+                <td>Keyboard → mouse</td>
+              </tr>
+
+              <tr class="D" style="background-color: #f5eeda">
+                <th scope="row">D</th>
+                <td>Drawing</td>
+                <td>-</td>
+                <td>Drawing lines using a pointing device</td>
+                <td>Dragging to draw a shape</td>
+              </tr>
+
+              <tr class="M" style="background-color: #dedcd7">
+                <th scope="row">M</th>
+                <td>Mental preparation</td>
+                <td>1.35</td>
+                <td>Preparing for a physical action</td>
+                <td>Pause before clicking the correct control</td>
+              </tr>
+
+              <tr class="R" style="background-color: #f5eeda">
+                <th scope="row">R</th>
+                <td>System response</td>
+                <td>-</td>
+                <td>Waiting for system feedback (if required)</td>
+                <td>Application loading</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+    </main>
+
+    <!-- Footer contains meta or supplementary information -->
+    <footer>
       <p>
-        Don Norman is a pioneer in the field of Human–Computer Interaction,
-        known for his work on user-centered design, usability, and cognitive
-        engineering.
+        <strong><i>Reference:</i></strong> <br />
+        Dix et al., Chapter 3 (pg# 125 - Norman) <br />
+        Dix et al., Chapter 12 (pg# 422 - GOMS) <br />Dix et al., Chapter 12
+        (pg# 436 - KLM)
       </p>
-    </section>
-  </main>
-
-  <!-- Footer contains meta or supplementary information -->
-  <footer>
-    <p>&copy; 2026 HCI–CG Course</p>
-  <p>
-    <a href="assignment01.html">Lab 01 Instructions</a> |
-    <a href="https://github.com/humeraaa/hci-cg-2026">Starter Code</a> |
-    <a href="https://humeraaa.github.io/hci-cg-2026/">Live Demo</a>
-  </p>
-  </footer>
-
-</body>
+      <p>
+        <a href="https://github.com/wajeeha-batool2005/hci-cg-2026.git"
+          >Starter Code - git repo</a
+        >
+      </p>
+    </footer>
+  </body>
 </html>
