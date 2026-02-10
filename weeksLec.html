@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Character encoding for proper text rendering -->
+  <meta charset="UTF-8" />
+  <title>Week 1-4 Lectures</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      font-size: 27px;
+    }
+
+    thead {
+      background-color: #a19a85;
+    }
+
+    .card,
+    .schneiderman,
+    .suchman {
+      background-color: #f5eeda;
+    }
+
+    .norman,
+    .nielsen,
+    .dix {
+      background-color: #dedcd7;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Page header: identifies the site and its purpose -->
+  <header>
+    <h1>Week 01-04 Lectures</h1>
+    <p>Important points from lectures of week 01-04</p>
+  </header>
+
+  <!-- Primary navigation landmark for keyboard and screen reader users -->
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="analysis.html">Interaction Analysis</a></li>
+      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+      <li><a href="htmlErrors.html">Lab Practice</a></li>
+      <li>
+        <a href="weeksLec.html" aria-current="page">Week 01-04 Lectures</a>
+      </li>
+      <li><a href="assignment01.html">Lab 01 Rules</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content landmark: unique content of this page -->
+  <main>
+    <section style="background-color: #e7f3ff;">
+      <h2>Semantic Networks</h2>
+      <article>
+        <h3>Human Processing Model</h3>
+        <p>
+          The Human Processing Model explains how humans handle information,
+          starting with a stimulus received through the senses and briefly
+          stored in sensory memory. This information is perceived, processed
+          in working memory, and compared with long-term memory to make
+          decisions, after which the motor system produces an action and
+          feedback completes the cycle. CNNs are inspired by this process,
+          especially human visual perception, as they analyze images in
+          layers—first detecting simple features like edges and then
+          recognizing complex patterns and objects, similar to how the human
+          brain processes visual information.
+        </p>
+      </article>
+      <article>
+        <h3>Fitt's Law</h3>
+        <p>
+          Fitts’ Law explains how long it takes for a user to point to and
+          select a target, such as clicking a button or icon. It states that
+          the time required to reach a target depends on two main factors: the
+          distance to the target and the size of the target. Targets that are
+          closer and larger are faster and easier to select, while smaller and
+          farther targets take more time and effort. This law is widely used
+          in Human–Computer Interaction (HCI) to design efficient interfaces,
+          ensuring that frequently used buttons are large, well-spaced, and
+          easy to reach, which improves speed, accuracy, and overall
+          usability.
+        </p>
+      </article>
+      <article>
+        <h3>Top-Down Approach</h3>
+        <p>
+          This semantic model describes the sequence of cognitive processes
+          starting with sensory input captured by sensory memory (visual and
+          auditory), which feeds into perception. Perception interacts with
+          short-term and long-term memory, where semantic memory helps assign
+          meaning. Cognition advances through thinking, involving skill
+          development and mental models. Reasoning—deductive, abductive, and
+          inductive—is used to analyze information. When solving problems, we
+          organize perceptions (gestalt), explore potential solutions (problem
+          space), and use strategies like analogy. Overall, the process flows
+          from sensory perception to memory, understanding, reasoning, and
+          problem-solving, supporting learning and decision-making.
+        </p>
+      </article>
+      <article>
+        <h3>Bottom-Up Approach</h3>
+        <p>
+          The bottom-up approach of memory starts with sensory input, which is
+          processed through perception and enters Short-Term Memory (STM). STM
+          temporarily holds information and has a limited capacity described
+          by Miller’s Law (7 ± 2 items). To manage this limit, information is
+          organized using chunking, where smaller units are grouped into
+          meaningful chunks. Because STM retains recent information more
+          strongly, the recency effect occurs, allowing the last items to be
+          recalled more easily. This approach highlights how memory builds
+          upward from basic sensory input to higher cognitive processing.
+        </p>
+      </article>
+    </section>
+
+    <section style="background-color: #f7e1be;">
+      <h2>Cognitive Processes</h2>
+      <p>
+        Cognitive processes include all processes underlying mental activities
+        like attention, perception, learning, memory thinking, problem
+        solving, reasoning.
+      </p>
+
+      <ul>
+        <li>
+          <strong>Sensation</strong> – The process of detecting and receiving
+          raw sensory stimuli from the environment.
+        </li>
+        <li>
+          <strong>Attention</strong> – The mental process of brining few
+          stimuli into the center of awareness out of many stimuli present.
+        </li>
+        <li>
+          <strong>Perception</strong> – The interpretation of sensory input to
+          make sense of the environment.
+        </li>
+        <li>
+          <strong>Learning</strong> – The acquisition of new knowledge,
+          skills, or behaviors through experience.
+        </li>
+        <li>
+          <strong>Memory</strong> – The process of storing, retaining, and
+          recalling information when needed.
+        </li>
+        <li>
+          <strong>Forgetting</strong> – The loss or inability to retrieve
+          previously stored information.
+        </li>
+        <li>
+          <strong>Thinking</strong> – The mental process of organizing and
+          analyzing information to form ideas or solutions.
+        </li>
+        <li>
+          <strong>Problem Solving</strong> – The process of identifying
+          solutions to complex or unfamiliar situations.
+        </li>
+        <li>
+          <strong>Reasoning</strong> – The ability to draw conclusions and
+          make inferences based on information.
+        </li>
+        <li>
+          <strong>Decision Making</strong> – The process of choosing the best
+          option among several alternatives.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>HCI Theories</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Theory</th>
+            <th scope="col">Approach</th>
+            <th scope="col">Core Concept</th>
+            <th scope="col">Memory Hook</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="card">
+            <th scope="row">Card et al.</th>
+            <td>Cognitive Model</td>
+            <td>Humans as processors</td>
+            <td>Can the human physically and mentally do this fast enough?</td>
+          </tr>
+          <tr class="norman">
+            <th scope="row">Norman (7 Stage)</th>
+            <td>Cognitive / Interaction Model</td>
+            <td>Affordances & errors</td>
+            <td>If users make mistakes, the design is wrong.</td>
+          </tr>
+          <tr class="schneiderman">
+            <th scope="row">Schneiderman</th>
+            <td>Interaction / Design Principles</td>
+            <td>8 Design rules</td>
+            <td>Follow rules and usability improves.</td>
+          </tr>
+          <tr class="nielsen">
+            <th scope="row">Nielsen</th>
+            <td>Heuristic / Evaluation Model</td>
+            <td>10 Usability heuristics</td>
+            <td>Find usability problems cheaply and early.</td>
+          </tr>
+          <tr class="suchman">
+            <th scope="row">Suchman</th>
+            <td>Contextual / Ethnographic Model</td>
+            <td>Context matters</td>
+            <td>Real use never follows the plan.</td>
+          </tr>
+          <tr class="dix">
+            <th scope="row">Dix et al.</th>
+            <td>Framework Model</td>
+            <td>Interaction framework</td>
+            <td>HCI is people, tasks, systems, and context.</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+
+    <section style="background-color: #e7f3ff;">
+      <h2>Automatic Syringe Design</h2>
+      <p>The automatic syringe example is a good illustration of interface design in safety-critical systems. The old
+        automatic syringe design was insufficient because it relied on a standard numeric input, forcing users to
+        mentally calculate or map the dosage, which increased errors and cognitive load. After consulting users, the
+        design was improved by adding increment/decrement controls for each digit, allowing doses to be adjusted
+        directly and intuitively. This shows that good design matters; it reduces mistakes, aligns with human cognitive
+        abilities, and ensures the device is safe, efficient, and easy to use, whereas poor design can lead to confusion
+        and potential risks.
+      </p>
+    </section>
+
+  </main>
+  <!-- Footer contains meta or supplementary information -->
+  <footer>
+    <p>
+      <strong><i>Reference:</i></strong> <br />
+      Semantic Networks -> week 1 slides (Slide # 46, 47, 48) <br />
+      Cognitive Processes -> week 2 slides (Slide # 15) <br />
+      Automatic Syringe -> Dix et al., (Book Pg # 8)
+    </p>
+    <p><a href="index.html">Back to Home</a></p>
+</body>
+
+</html>
